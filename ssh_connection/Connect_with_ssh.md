@@ -41,5 +41,14 @@ Many application derives from this algorithm :
 
 3. You can check the file `~/.ssh/authorized_keys`, the file should match your public key (.pub)
 
-Current available servers are :
-stark (UNF), magma (UNF), thuya (Processing room), pin (processing room), sapin (processing room)
+Current available servers for UNF:
+- stark,
+- magma
+- thuya
+
+Servers in the processing room are :
+- thuya
+- pin
+- sapin
+
+You can also have a look on some example files for a public key, private key, and authorized keys.
