@@ -1,6 +1,7 @@
-To connect remotly to a server, the standard way to do it is using the ssh protocol.
-It uses public-key cryptography algorithms with the idea that a mathematical function can encode information with a form of password.
+To connect remotly to a server, the standard way to do it is using the ssh protocol. It uses public-key cryptography algorithms with the idea that a mathematical function can encode information with a form of password.
 And no one can decode the information but just the one who has the password (depending on prime numbers).
+
+
 This is how you can connect to a server, ther server will autehentificate yourself by sending a message,
 and if you can prove that it is indeed you (by decoding a message) then you can connect to that server.
 The passwords used to authentificate you are called encryption key-pair : a public one (everyone has access to it) and a 
