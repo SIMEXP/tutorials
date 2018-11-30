@@ -50,4 +50,9 @@ squeue -u <user_name>
 5. When it is done, the output will be available in a file called `slurm-<id_of_job>
 .out`
 
+6. Information on finished jobs can be found by typing
+```
+seff <job_id>
+```
+
 You can add more informations like the job name `--job-name=test`, the output `test-%J.out`
