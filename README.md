@@ -10,8 +10,8 @@ If you like to know more the maths behind it, I suggest you to learn [this](http
 
 #### What you will learn
 1. Create a public and private key on your system
-2. Send your public id to the server
 2. Connect to a remote server
+2. Automatically authentificate using your public id
 
 ## On how to use compute canada super computers
 This tutorial will guide through the process of using compute canada's HPCs (**H**igh **P**erformance **C**omputer).
