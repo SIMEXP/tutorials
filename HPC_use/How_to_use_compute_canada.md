@@ -8,9 +8,11 @@ For that, you will need a compute-canada account :
 2. Click on 'register' and enter your personnal information. For the lab, the insitution is udem, the department is Psychology and  you should ask for the reference number for your sponsor (Pierre B.).
 3. Once your registering is validated, you can start using their server !
 
-`ssh <your_username>@cedar.computecanada.ca`
+`ssh <your_username>@graham.computecanada.ca`
 
 4. If you automatically want to log-in, follow [this](https://github.com/SIMEXP/tutorials/blob/master/ssh_connection/Connect_with_ssh.md)
+
+If you can't connect at this point, you would want to check the [server status](https://status.computecanada.ca/).
 
 
 
