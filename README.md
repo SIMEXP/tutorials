@@ -6,7 +6,7 @@ We will understand how to establish a cryptographically secured connection betwe
 If you like to know more the maths behind it, I suggest you to learn [this](https://nrich.maths.org/2200).
 
 #### Requirements
-- Linux system with basics on cmd line
+- Basics use of Linux (cmd line)
 
 #### What you will learn
 1. Create a public and private key on your system
@@ -18,7 +18,7 @@ This tutorial will guide through the process of using compute canada's HPCs (**H
 Follow this [link](https://docs.computecanada.ca/wiki/Getting_Started) for more information.
 
 #### Requirements
-- Linux system with basics on cmd line
+- Basics use of Linux (cmd line, shell scripts)
 - Basic knowledge on how to connect to a remote server
 - Comfortable with fmri pipelines (NIAK)
 
