@@ -46,6 +46,11 @@ sbatch simple_job.sh
 ```
 squeue -u <user_name>
 ```
+You can also check the running process in the node with
+```
+srun --jobid <job_id> --pty htop -u <user_name>
+```
+`srun` will allow you to run something (in our case `htop`) in parrallel.
 
 5. When it is done, the output will be available in a file called `slurm-<id_of_job>
 .out`
