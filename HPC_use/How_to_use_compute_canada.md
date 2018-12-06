@@ -135,12 +135,13 @@ seff <job_id>
 ```
 
 It is possible to allow slack to send you notifications when a job is running, finished etc.. 
-First create a mail in slack
-
-
+First create a mail in slack in `preferences` under `messages and media` section.
+Then, you can use the provided email address to let SLURM send you notifications in slack (it will be sent by the *slackbot*).
+Just insert the following in your `.sh` job script
 ```
-#SBATCH --mail-user=r1w2w6qxc8y1s5n6@simexp.slack.com 
+#SBATCH --mail-user=XXXX@simexp.slack.com 
 #SBATCH --mail-type=BEGIN
 #SBATCH --mail-type=END
 ```
-7. using slack to enable destkop notifs via slurm --user-mail
+
+<img src="slackMail.png" width="300">
