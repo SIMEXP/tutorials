@@ -16,6 +16,8 @@ ssh <your_username>@cedar.computecanada.ca
 
 If you can't connect at this point, you would want to check the [server status](https://status.computecanada.ca/).
 
+Though it is not recomended for performance purpose, you can log-in with a GUI by using the x11 forwarding option `ssh -Y` to connect to nodes that enables this feature.
+
 ## Submit a simple serial job
 
 When using HPCs, you have to tell him how to interact between you and your programm. 
