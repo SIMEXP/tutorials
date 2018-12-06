@@ -18,12 +18,12 @@ This tutorial will guide through the process of using compute canada's HPCs (**H
 Follow this [link](https://docs.computecanada.ca/wiki/Getting_Started) for more information.
 
 #### Requirements
-- Basics use of Linux (cmd line, shell scripts)
-- Basic knowledge on how to connect to a remote server
+- Basics use of Linux (cmd line, shell scripting, ssh)
+- Basic knowledge on containerized app (Docker, singularity)
 - Comfortable with fmri pipelines (NIAK)
 
 #### What you will learn
 1. Connect to a compute canada node
 2. Submit a simple job to the server
-3. Parrallelize your own application using singularity
+3. Launch a parrallelized containerized app
 4. Use NIAK on HPCs
