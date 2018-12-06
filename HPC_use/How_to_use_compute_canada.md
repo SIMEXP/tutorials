@@ -15,11 +15,12 @@ ssh <your_username>@cedar.computecanada.ca
 
 If you can't connect at this point, you would want to check the [server status](https://status.computecanada.ca/).
 
-## Submit a simple job
+## Submit a simple serial job
 
 When using HPCs, you have to tell him how to interact between you and your programm. 
 Execution of one program is called a *job* and you will require to create a *job script* to interact with the HPCs.
 The HPC uses a *job scheduler* called [SLURM](https://slurm.schedmd.com/) to decide when and where the job will be run using the job script.
+A serial job is not parrallelized, and is the simplest type of job.
 
 1. Create a simple job script `simple_job.sh` that will output a sentence
 
@@ -52,11 +53,25 @@ squeue -u <user_name>
 5. When it is done, the output will be available in a file called `slurm-<id_of_job>
 .out`
 
-## Launch and debug a singularity app
+## Launch a parrallelized containerized app
 
 [Docker](https://docs.docker.com/) is a common and powerfull tool to bundle or "containerize" application into a virtual environment. This will help you to deploy easilly your work, without worrying about the environment where it will be used.
 You can't use docker on HPCs because you need admin rights to run it, but [singularity](http://singularity.lbl.gov/) doesn't need sudo rights.
 
+Before continuing this tutorial, you should [install singularity on your computer](https://singularity.lbl.gov/install-linux) (>=2.5.2).
+
+1. Create a single python script `par_job.py` that will output number from *a* to *b*, every 10s
+```
+import sys
+import time
+
+for i in range(int(sys.argv[1]), int(sys.argv[2])):
+    print(i)
+    time.sleep(10) 
+```
+You can test it with `python 1 10` and it should output all the numbers from 1 to 10 after 100s
+
+2. 
 When you submitted a job it is really usefull to check its status, the running process on the node or debugging inside it.
 
 
