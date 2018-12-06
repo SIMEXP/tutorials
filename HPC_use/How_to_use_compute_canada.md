@@ -1,5 +1,6 @@
 [Compute-canada](https://www.computecanada.ca/home/) is a provider of HPCs that allows you to achieve massive computation speed. 
 The HPCs are available accross all Canada and free for academia, so you should use it !
+Most of this tutorial was highly based from the [official website](https://docs.computecanada.ca/wiki/Running_jobs).
 
 ## Connecting to their server
 The first thing to do is to connect to their server. 
@@ -60,7 +61,7 @@ You can't use docker on HPCs because you need admin rights to run it, but [singu
 
 Before continuing this tutorial, you should [install singularity on your computer](https://singularity.lbl.gov/install-linux) (>=2.5.2).
 
-1. Create a single python script `par_job.py` that will output number from *a* to *b*, every 10s
+1. Create a single python script `par_job.py` inside you home `~/` that will output number from *a* to *b*, every 10s
 ```
 import sys
 import time
@@ -71,20 +72,75 @@ for i in range(int(sys.argv[1]), int(sys.argv[2])):
 ```
 You can test it with `python 1 10` and it should output all the numbers from 1 to 10 after 100s
 
-2. 
-When you submitted a job it is really usefull to check its status, the running process on the node or debugging inside it.
+2. Download a container online (on [shub](https://singularity-hub.org/) so you can use it to launch your script inside it
+```
+singularity pull --name anaconda3.simg shub://mjstealey/anaconda3
+```
 
+3. Test your script inside the container
+```
+singularity --quiet exec anaconda3.simg python par_job.py 1 10
+```
 
+By default, singularity will mount your home inside the container. You can check that `par_job.py` is indeed inside the container
+```
+singularity --quiet shell anaconda3.simg
+ls
+```
 
-You can also check the running process in the node with
+4. Transfer the singularity image `anaconda3.simg` from your computer to cedar `~/project/rrg-pbellec/<user_name>/`
+and create in the home folder a file `params` that will be used later
+```
+1 10
+11 20
+21 30
+31 40
+41 50
+51 60
+61 70
+71 80
+81 90
+91 100
+```
+
+5. We will submit a whole batch of job with just one script `simple_ar_job.sh`. This will allows us to run our application in parrall through many nodes on computecanada.
+```
+#!/bin/bash
+#SBATCH --time=00:20:00
+#SBATCH --account=rrg-pbellec
+#SBATCH --array=1-10
+
+PARAMS=$(cat params | head -n $SLURM_ARRAY_TASK_ID| tail -n 1)
+echo $PARAMS
+
+singularity --quiet exec -B ~/projects/rrg-pbellec/<user_name>/:/scripts anaconda3.simg python /scripts/par_job.py ${PARAMS[0]} ${PARAMS[1]}
+```
+The line `#SBATCH --array=1-10` tells you that this is a [job array](https://docs.computecanada.ca/wiki/Running_jobs#Array_job) and you specify here that you will run 10 parrallel jobs. Using `--array=1-10%2` tells you that you want no more than 2 jobs running in parrallel, `--array=1-10:2` is equivalent to `--array=1,3,5,7,9`.
+
+`PARAMS=$(cat params | head -n $SLURM_ARRAY_TASK_ID| tail -n 1)` is used to read all the parameters that you want to pass to the python script from the file `params`.
+
+The option `singularity --quiet exec -B ~/projects/rrg-pbellec/<user_name>/:/scripts` allows you to mount the directory on your host `~/projects/rrg-pbellec/<user_name>/` to the directory on the container `/scripts`.
+
+6. Now you can submit the script to SLURM !
+
+7. When your jobs is running, check the process for one job in one of the node by running
 ```
 srun --jobid <job_id> --pty htop -u <user_name>
 ```
 `srun` will allow you to run something (in our case `htop`) in parrallel.
 
-
-6. Information on finished jobs can be found by typing
+8. When the jobs are finished, check the log and all the `slurm-<jobid>.out`
 ```
 seff <job_id>
+```
+
+It is possible to allow slack to send you notifications when a job is running, finished etc.. 
+First create a mail in slack
+
+
+```
+#SBATCH --mail-user=r1w2w6qxc8y1s5n6@simexp.slack.com 
+#SBATCH --mail-type=BEGIN
+#SBATCH --mail-type=END
 ```
 7. using slack to enable destkop notifs via slurm --user-mail
