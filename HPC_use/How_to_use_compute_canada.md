@@ -42,6 +42,7 @@ You can also use [sftp](https://docs.computecanada.ca/wiki/Transferring_data) if
 ```
 rsync -rlt --progress simple_job.sh cedar.computecanada.ca:~/projects/def-pbellec/<user_name>/
 ```
+A best practice is to use your home directory inside the lab group (`def-xxx`) like above. If you store data in your root directory at the location of `~`, you will run out of memory fast because [you have just 47GB in there](https://docs.computecanada.ca/wiki/Storage_and_file_management).
 
 3. Submit the job script with SLURM
 ```
