@@ -2,7 +2,7 @@
 The HPCs are available accross all Canada and free for academia, so you should use it !
 Most of this tutorial was highly based from the [official website](https://docs.computecanada.ca/wiki/Running_jobs).
 
-## Connecting to their server
+## Connecting to compute canada server
 The first thing to do is to connect to their server. 
 For that, you will need a compute-canada account : 
 1. Go to the login page : https://ccdb.computecanada.ca/security/login
