@@ -17,7 +17,10 @@ Many application derives from this algorithm :
 1. Open a prompt (ctrl+alt+t)
 2. Create your keys
 
-``ssh-keygen -t rsa``
+```
+ssh-keygen -t rsa
+```
+
 
 3. Skip all the steps (press Enter)
 4. You have now your keys in `~/.ssh` and you can open them to see what they look like
@@ -26,7 +29,9 @@ Many application derives from this algorithm :
 ### Connect to the server
 1. 
 
-`ssh <you_username>@<server_name>`
+```
+ssh <you_username>@<server_name>
+```
 
 2. Create a fingerprint
 3. Provide your password
@@ -34,11 +39,15 @@ Many application derives from this algorithm :
 ### Automatic authentification
 1. Send your public key to the server
 
-`ssh-copy-id <you_username>@<server_name>`
+```
+ssh-copy-id <you_username>@<server_name>
+```
 
 2. When you will log-in to the server, at this point you are not supposed to be ask for a password
 
-`ssh <your_username>@cedar.computecanada.ca`
+```
+ssh <your_username>@cedar.computecanada.ca
+```
 
 3. You can check the file `~/.ssh/authorized_keys`, the file should match your public key (.pub)
 
