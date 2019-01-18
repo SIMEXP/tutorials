@@ -49,6 +49,6 @@ ssh -L 7777:localhost:7777 ltetrel@pin.criugm.qc.ca
 3. You can now just open the link outputted by the container
 <img src="notebook_weblink.png" width="300">
 
-*If you need other libraries for your application, it is possible to update the container.
+*If you need other libraries for your application, it is possible to update the container.*
 
-Please ask to* : #ltetrel
+*Please ask to* : #ltetrel
