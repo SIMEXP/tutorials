@@ -19,10 +19,11 @@ ssh pin
 rsync -rlt --info=progress2 <my_local_file> pin.criugm.qc.ca:~/path/where/you/want/<my_remote_file>
 ```
 
-1. upload the needed database
+1. upload the database
 ```
 rsync -rlt --info=progress2 <my_local_database> pin.criugm.qc.ca:~/path/where/you/want/<my_remote_database>
 ```
+Please ensure that the data is not already available somewhere on `/data/cisl`
 
 ### Launch the container
 
