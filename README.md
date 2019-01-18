@@ -27,3 +27,16 @@ Follow this [link](https://docs.computecanada.ca/wiki/Getting_Started) for more 
 2. Submit a simple job to the server
 3. Launch a parrallelized containerized app
 4. Use NIAK on HPCs
+
+## On how to use deeplearning notebooks remotly
+You will use [singularity](https://singularity.lbl.gov/) to launch a deeplearning container on a remote server.
+
+#### Requirements
+- Basics use of Linux (cmd line, shell scripting, ssh)
+- Basic knowledge on containerized app (Docker, singularity)
+- connection to a remote server
+
+#### What you will learn
+1. Use singularity container
+2. Work on jupyter notebook for deep learning
+3. Establish secure connection and port-forwarding from the server to your computer
