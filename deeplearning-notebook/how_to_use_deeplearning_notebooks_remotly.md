@@ -1,7 +1,7 @@
 Containerized technology is one of the major change in scientific world.
 It allows **reproducible**, **large-scale** and **burden-free environment setup** for science.
 In the mean-time, jupyter notebook provides a **interactive coding session** and easy way to work on python environment.
-You will learn how to launch your favourite **notebook** on a **remote server** (from CRIUGM, or computecanada) using a specialized container technology called **[singularity]**(https://singularity.lbl.gov/), which allows you to run containers without sudo rights.
+You will learn how to launch your favourite **notebook** on a **remote server** (from CRIUGM, or computecanada) using a specialized container technology called **[singularity](https://singularity.lbl.gov/)**, which allows you to run containers without sudo rights.
 
 ### Connect to the desired server
 
