@@ -34,7 +34,7 @@ cd /data/cisl/CONTAINERS
 ```
 2. run the singularity image
 ```
-singularity exec -B ~/Documents/work/sana_notebooks/:/notebooks deep-neuro-docker.simg bash -c "source /etc/bash.bashrc" && jupyter notebook --ip '*' --no-browser --allow-root
+singularity exec -B <notebook_path>:/notebooks deep-neuro-docker.simg bash -c "source /etc/bash.bashrc" && jupyter notebook --ip 0.0.0.0 --no-browser --allow-root
 ```
 
 ### work on the notebook remotely !
