@@ -52,7 +52,7 @@ Where the output from jupyter on the remote indicates you the server port that i
 
 If nobody is using the server ports, it will be usually `8888`.
 
-3. You can now just open a web browser with the jupyter hyperlink from [previous section](###Launch the container)
+3. You can now just open a web browser with the jupyter hyperlink from [previous section](### Launch the container)
 
 *If you need other libraries for your application, it is possible to update the container.*
 
