@@ -34,7 +34,7 @@ cd /data/cisl/CONTAINERS
 ```
 2. run the singularity image
 ```
-singularity run -B user:/run/user tensorflow-latest-py3.simg --port=7777
+singularity exec -B ~/Documents/work/sana_notebooks/:/notebooks deep-neuro-docker.simg bash -c "source /etc/bash.bashrc" && jupyter notebook --ip '*' --no-browser --allow-root
 ```
 
 ### work on the notebook remotely !
