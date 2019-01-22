@@ -47,6 +47,7 @@ singularity exec -B <notebook_path>:/notebooks deep-neuro-docker.simg \
 ssh -L <server_port>:localhost:8888 pin
 ```
 Where `<server_port>` is indicated by the output from jupyter on the remote :
+
 <img src="notebook_weblink.png" width="300">
 If nobody is using the server ports, it will be usually `8888`.
 
