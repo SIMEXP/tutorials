@@ -25,7 +25,7 @@ rsync -rlt --info=progress2 <my_local_database> pin.criugm.qc.ca:~/path/where/yo
 ```
 **Please ensure that the data is not already available somewhere on** `/data/cisl`
 
-###Launch the container
+### Launch the container
 
 1. go to `/data/cisl/CONTAINERS`
 ```
@@ -38,7 +38,7 @@ singularity exec -B <notebook_path>:/notebooks deep-neuro-docker.simg \
             jupyter notebook --notebook-dir=/notebooks --no-browser --allow-root
 ```
 
-###Work on the notebook remotely !
+### Work on the notebook remotely !
 
 1. Open a new command prompt
 
@@ -56,4 +56,4 @@ If nobody is using the server ports, it will be usually `8888`.
 
 *If you need other libraries for your application, it is possible to update the container.*
 
-*Please ask to* : #ltetrel
+*Please ask to* : @ltetrel
