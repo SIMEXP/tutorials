@@ -46,9 +46,10 @@ singularity exec -B <notebook_path>:/notebooks deep-neuro-docker.simg \
 ```
 ssh -L <server_port>:localhost:8888 pin
 ```
-Where `<server_port>` is indicated by the output from jupyter on the remote :
+Where the output from jupyter on the remote indicates you the server port that is in use `http://localhost:<server_port>` :
 
 <img src="notebook_weblink.png" width="500">
+
 If nobody is using the server ports, it will be usually `8888`.
 
 3. You can now just open a web browser with the jupyter hyperlink from [previous section](#my-multi-word-header)
