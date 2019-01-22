@@ -34,20 +34,23 @@ cd /data/cisl/CONTAINERS
 ```
 2. run the singularity image
 ```
-singularity exec -B <notebook_path>:/notebooks deep-neuro-docker.simg bash -c "source /etc/bash.bashrc" && jupyter notebook --ip 0.0.0.0 --no-browser --allow-root
+singularity exec -B <notebook_path>:/notebooks deep-neuro-docker.simg \
+            jupyter notebook --notebook-dir=/notebooks --no-browser --allow-root
 ```
 
 ### work on the notebook remotely !
 
-1. open a new command prompt
+1. Open a new command prompt
 
 2. Create a ssh tunnel so you can work on your browser locally (even if it is running remotely)
 ```
-ssh -L 7777:localhost:7777 ltetrel@pin.criugm.qc.ca
+ssh -L <server_port>:localhost:8888 pin
 ```
-
-3. You can now just open the link outputted by the container
+Where `<server_port>` is indicated by the output from jupyter on the remote :
 <img src="notebook_weblink.png" width="300">
+If nobody is using the server ports, it will be usually `8888`.
+
+3. You can now just open a web browser with the jupyter hyperlink from [previous section](#my-multi-word-header)
 
 *If you need other libraries for your application, it is possible to update the container.*
 
