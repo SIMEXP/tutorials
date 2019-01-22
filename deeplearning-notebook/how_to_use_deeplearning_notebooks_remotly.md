@@ -40,7 +40,7 @@ singularity exec -B <notebook_path>:/notebooks deep-neuro-docker.simg \
 
 ### Work on the notebook remotely !
 
-1. Open a new command prompt
+1. Open a **new command prompt**
 
 2. Create a ssh tunnel so you can work on your browser locally (even if it is running remotely)
 ```
