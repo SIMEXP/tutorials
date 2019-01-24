@@ -38,6 +38,11 @@ singularity exec -B <notebook_path>:/notebooks deep-neuro-docker.simg \
             jupyter notebook --notebook-dir=/notebooks --no-browser --allow-root
 ```
 
+If you have a user space on the server and installed anaconda, you could have some trouble because singularity image mounts by default your home to the container. It can then load the library from the server/your local computer instead of the libraries inside the container !
+To avoid this please use this command instead :
+```
+singularity exec -B <notebook_path>:/notebooks,<notebook_path>:/home/$USER --no-home deep-neuro-docker.simg jupyter notebook --notebook-dir=/notebooks --no-browser --allow-root
+```
 ### Work on the notebook remotely !
 
 1. Open a **new command prompt**
