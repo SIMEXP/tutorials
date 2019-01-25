@@ -12,7 +12,7 @@ You will learn how to launch your favourite **notebook** on a **remote server** 
 ssh pin
 ```
 
-### Upload your data in the server
+### (if necessary) Upload your data in the server
 
 1. upload he notebooks
 ```
