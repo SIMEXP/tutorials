@@ -7,21 +7,21 @@ You will learn how to launch your favourite **notebook** on a **remote server** 
 
 1. open a cmd prompt
 
-2. connect on `pin` (passwordless authentification is assumed)
+2. connect on `thuya` (passwordless authentification is assumed)
 ```
-ssh pin
+ssh ${USER}@thuya
 ```
 
 ### (if necessary) Upload your data in the server
 
 1. upload he notebooks
 ```
-rsync -rlt --info=progress2 <my_local_file> pin.criugm.qc.ca:~/path/where/you/want/<my_remote_file>
+rsync -rlt --info=progress2 <my_local_file> ${USER}@thuya.criugm.qc.ca:~/path/where/you/want/<my_remote_file>
 ```
 
 1. upload the database
 ```
-rsync -rlt --info=progress2 <my_local_database> pin.criugm.qc.ca:~/path/where/you/want/<my_remote_database>
+rsync -rlt --info=progress2 <my_local_database> ${USER}@thuya.criugm.qc.ca:~/path/where/you/want/<my_remote_database>
 ```
 **Please ensure that the data is not already available somewhere on** `/data/cisl`
 
@@ -48,7 +48,7 @@ singularity exec -B <notebook_path>:/notebooks,<notebook_path>:/home/$USER --no-
 
 2. Create a ssh tunnel so you can work on your browser locally (even if it is running remotely)
 ```
-ssh -L <server_port>:localhost:8888 pin
+ssh -L <server_port>:localhost:<server_port> pin
 ```
 Where the output from jupyter on the remote indicates you the server port that is in use `http://localhost:<server_port>` :
 
