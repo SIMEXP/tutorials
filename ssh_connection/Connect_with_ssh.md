@@ -52,11 +52,12 @@ ssh <your_username>@cedar.computecanada.ca
 3. You can check the file `~/.ssh/authorized_keys`, the file should match your public key (.pub)
 
 ## Available servers for UNF:
-- stark,
-- magma
-- thuya
+- stark (CPU)
+- magma (CPU)
+- ginkgo (GPU)
 
 ## Available servers in the processing room are :
 - thuya
 - pin
 - sapin
+- meleze
