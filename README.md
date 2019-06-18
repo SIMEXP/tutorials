@@ -40,3 +40,15 @@ You will use [singularity](https://singularity.lbl.gov/) to launch a deeplearnin
 1. Use singularity container
 2. Work on jupyter notebook for deep learning
 3. Establish secure connection and port-forwarding from the server to your computer
+
+## On how to encrypt a github repository
+git-crypt will be used
+
+#### Requirements
+- Comfortable with git usage
+- Basics use of Linux (cmd line)
+- Basic knowledge off rsa encryption
+
+#### What you will learn
+1. Encrypt some files inside a github repo
+2. Decrypt theses files locally
