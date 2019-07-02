@@ -6,7 +6,7 @@ Most of this tutorial was highly based from the [official website](https://docs.
 The first thing to do is to connect to their server. 
 For that, you will need a compute-canada account : 
 1. Go to the login page : https://ccdb.computecanada.ca/security/login
-2. Click on 'register' and enter your personnal information. For the lab, the insitution is udem, the department is Psychology and  you should ask for the reference number for your sponsor (Pierre B.).
+2. Click on 'register' and enter your personnal information. For the lab, the insitution is udem, the department is Psychology and you should ask your sponsor (in our case Pierre Bellec) for his CCRI reference number.
 3. Once your registering is validated, you can start using their server !
 ```
 ssh <your_username>@cedar.computecanada.ca
