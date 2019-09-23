@@ -13,6 +13,7 @@ This can be seen with tensorflow for example, where sometimes you would use 1 cp
 and all the cpus for the fitting.
 Or the GPU would be used just 10% of the time, because your data_loading takes 90% to do.
 https://blog.sopticek.net/2017/06/03/concurrent-and-parallel-programming-in-python-part-2/
+https://aws.amazon.com/blogs/machine-learning/parallelizing-across-multiple-cpu-gpus-to-speed-up-deep-learning-inference-at-the-edge/
 
 (by order of complexity)
 * load in float32 instead of float64 (the precision loss in macvhine learning is ridiculous compared to the gain of time). 
