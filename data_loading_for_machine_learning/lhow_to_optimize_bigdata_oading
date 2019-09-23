@@ -12,6 +12,7 @@ Reading the nifti image one by one inside a loop, without any optimization can m
 This can be seen with tensorflow for example, where sometimes you would use 1 cpu (for the data loading) 
 and all the cpus for the fitting.
 Or the GPU would be used just 10% of the time, because your data_loading takes 90% to do.
+https://blog.sopticek.net/2017/06/03/concurrent-and-parallel-programming-in-python-part-2/
 
 (by order of complexity)
 * load in float32 instead of float64 (the precision loss in macvhine learning is ridiculous compared to the gain of time). 
