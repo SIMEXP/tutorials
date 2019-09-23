@@ -15,8 +15,8 @@ Or the GPU would be used just 10% of the time, because your data_loading takes 9
 https://blog.sopticek.net/2017/06/03/concurrent-and-parallel-programming-in-python-part-2/
 https://aws.amazon.com/blogs/machine-learning/parallelizing-across-multiple-cpu-gpus-to-speed-up-deep-learning-inference-at-the-edge/
 
-pool vs process : for huge amount of processes (> thousands), use multiprocessing.Pool which can efficiently dispatch your tasks among the available workers.
-If you have slow number of process (~tens), then use multiprocessing.Process().
+pool vs process : for huge amount of processes (> thousands) and low I/O, use multiprocessing.Pool which can efficiently dispatch your tasks among the available workers.
+If you have slow number of process (~tens) and intense I/O, then use multiprocessing.Process().
 https://medium.com/datadriveninvestor/python-multiprocessing-pool-vs-process-comparative-analysis-6c03c5b54eec
 https://www.ellicium.com/python-multiprocessing-pool-process/
 
