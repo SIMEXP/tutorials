@@ -21,6 +21,9 @@ https://medium.com/datadriveninvestor/python-multiprocessing-pool-vs-process-com
 https://www.ellicium.com/python-multiprocessing-pool-process/
 http://blog.shenwei.me/python-multiprocessing-pool-difference-between-map-apply-map_async-apply_async/
 
+Data feeder example in DL:
+https://github.com/asheshjain399/Tensormodels/blob/master/tensormodels/data_reader/data_feeder.py
+
 (by order of complexity)
 * load in float32 instead of float64 (the precision loss in macvhine learning is ridiculous compared to the gain of time). 
 * use /scratch space (10% speed improvement)
