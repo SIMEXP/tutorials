@@ -24,6 +24,8 @@ pool vs process : for huge amount of processes (> thousands) and low I/O, use mu
 If you have slow number of process (~tens) and intense I/O, then use multiprocessing.Process().
 https://medium.com/datadriveninvestor/python-multiprocessing-pool-vs-process-comparative-analysis-6c03c5b54eec
 https://www.ellicium.com/python-multiprocessing-pool-process/
+
+good overview:
 http://blog.shenwei.me/python-multiprocessing-pool-difference-between-map-apply-map_async-apply_async/
 
 Data feeder example in DL:
