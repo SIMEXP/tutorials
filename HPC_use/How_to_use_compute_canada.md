@@ -113,6 +113,7 @@ and create in the home folder a file `params` that will be used later
 #SBATCH --account=rrg-pbellec
 #SBATCH --array=1-10
 
+module load singularity/3.4
 PARAMS=$(cat params | head -n $SLURM_ARRAY_TASK_ID| tail -n 1)
 echo $PARAMS
 
